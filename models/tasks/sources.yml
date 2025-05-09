@@ -1,0 +1,11 @@
+# models/sources.yml
+version: 2
+
+sources:
+  - name: ZELLER
+    database: ZELLER
+    tables:
+      - name: TRANSACTIONS
+        schema: TRANSACTIONS
+      - name: MERCHANT
+        schema: MERCHANT
