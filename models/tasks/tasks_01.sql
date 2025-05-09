@@ -20,8 +20,8 @@ WITH sales_weeks AS (
             WHEN t.DATE BETWEEN '2022-12-05' AND '2022-12-11' THEN 'Week Dec 5-11'
             WHEN t.DATE BETWEEN '2022-11-28' AND '2022-12-04' THEN 'Week Nov 28-Dec 4'
         END AS sales_week
-    FROM {{ source('ZELLER', 'TRANSACTIONS') }} t
-    JOIN {{ source('ZELLER', 'MERCHANT') }} m 
+    FROM ZELLER.TRANSACTIONS.TRANSACTIONS t
+    JOIN ZELLER.MERCHANT.MERCHANT m 
       ON t.MERCHANT_ID = m.MERCHANT_ID
     WHERE 
         t.STATUS = 'APPROVED'  -- Based on your sample data showing "APPROVED"

@@ -1,11 +1,10 @@
-# models/sources.yml
 version: 2
 
 sources:
-  - name: ZELLER
-    database: ZELLER
+  - name: ZELLER                   # Logical source name for dbt
+    database: ZELLER               # Snowflake database name
     tables:
-      - name: TRANSACTIONS
-        schema: TRANSACTIONS
+      - name: TRANSACTIONS         # Table name in Snowflake
+        schema: TRANSACTIONS       # Schema name in Snowflake
       - name: MERCHANT
         schema: MERCHANT
